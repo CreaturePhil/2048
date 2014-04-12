@@ -55,9 +55,35 @@ HTMLActuator.prototype.addTile = function (tile) {
   var positionClass = this.positionClass(position);
 
   // We can't use classlist because it somehow glitches when replacing classes
-  var classes = ["tile", "tile-" + tile.value, positionClass];
+  var trueValue = 0;
+  console.log(tile.value);
+  if (tile.value === 6) {
+    trueValue = 1;
+  }
+  if (tile.value === 36) {
+    trueValue = 2;
+  }
+  if (tile.value === 1296) {
+    trueValue = 3;
+  }
+  if (tile.value === 1679616) {
+    trueValue = 4;
+  }
+  if (tile.value === 2821109907456) {
+    trueValue = 5;
+  }
+  if (tile.value === 7.958661109946401e+24) {
+    trueValue = 6;
+  } 
+  if (tile.value === 6.334028666297328e+49 ) {
+    trueValue = 7;
+  }
+  if (tile.value === 4.0119919145476304e+99) {
+    trueValue = 8;
+  }
+  var classes = ["tile", "tile-" + trueValue, positionClass];
 
-  if (tile.value > 2048) classes.push("tile-super");
+  if (tile.value > 4.0119919145476304e+99) classes.push("tile-super");
 
   this.applyClasses(wrapper, classes);
 
@@ -105,7 +131,7 @@ HTMLActuator.prototype.positionClass = function (position) {
 
 HTMLActuator.prototype.updateScore = function (score) {
   this.clearContainer(this.scoreContainer);
-
+  
   var difference = score - this.score;
   this.score = score;
 
