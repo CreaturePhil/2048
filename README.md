@@ -5,7 +5,7 @@ Made just for fun. [Play it here!](http://creaturephil.github.io/4.01e99)
 
 ### Contributions
 
- - [Gabriele Cirulli](http://gabrielecirulli.github.io/2048/) forked
+ - [Gabriele Cirulli](https://github.com/gabrielecirulli/2048) forked
  - [TimPetricola](https://github.com/TimPetricola) added best score storage
  - [chrisprice](https://github.com/chrisprice) added custom code for swipe handling on mobile
  - [elektryk](https://github.com/elektryk) made swipes work on Windows Phone
